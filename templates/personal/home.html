@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CLIS</title>
+
+    {% include 'personal/css_links.html' %}
+</head>
+<body>
+    <div class="keep-link-active home"></div>
+    <main>
+        {% include 'personal/topbar.html' %}
+        <div class="site-body">
+            {% include 'personal/sidenav.html' %}
+
+            <div class="content">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+    
+    {% include 'personal/js_links.html' %}
+    
+</body>
+</html>
